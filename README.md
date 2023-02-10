@@ -74,6 +74,50 @@ Note :- If you have only python version then , write python command instead of p
    fig.1
 </p>
 
+Now, there are 2 process that one can install ALIGN as a USER or as a DEVELOPER
+
+** For installing ALIGN as a USER 
+
+```
+$          pip install -v .
+```
+
+Note:- If after running this command it’s showing some error like gcc is not there or wheel not found 
+“Building wheel for align (pyproject.toml) did not run successfully”
+Could not build wheels for align , which is required to install pyproject.toml-based projects “
+
+run this command inside ALIGN-public 
+
+```
+$             python3 -m pip install wheel setuptools pip –upgrade
+```
+
+
+or for solving that gcc error if it’s coming like gcc already satisfied gcc not found when typing gcc –version then , for that we need to change the softlink from /usr/bin 
+
+or create a new softlink or symbolic link 
+
+before that run these commands and then try again to install 
+
+```
+$             sudo apt update
+$             sudo apt install build-essential
+$             sudo apt-get install manpages-dev 
+```
+
+Now , if still error persist then, create softlink now 
+
+```
+$             cd
+$             cd /usr/bin/
+$             ls
+ see gcc is there or not 
+if there are more than one gcc are there then run this command 
+$             sudo rm /usr/bin/gcc
+```
+
+
+
 ![2](https://user-images.githubusercontent.com/90523478/218179329-d9b67fea-df29-4b34-9477-d427d31a54e6.png)
 
 ![3](https://user-images.githubusercontent.com/90523478/218179438-ecd73ff2-0ed3-41f5-99a7-67039d7efdc6.png)
