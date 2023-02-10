@@ -22,11 +22,16 @@ and python3 3.10 version is installed
 
 **If gcc or python is not installed then install it using the command which are given below:-
 
+```
 sudo apt-get install gcc-9
+```
+
 
  check gcc –version
 
+```
 sudo apt-get install python3
+```
 
 check python3 –version
 
