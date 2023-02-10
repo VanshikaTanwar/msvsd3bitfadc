@@ -52,10 +52,12 @@ $           cd ALIGN-public
 
 As , we have installed the Python 3 so, follow these commands which are given below inside the ALIGN-public directory:
 
+```
 $          python3 -m venv general
 
 $          source general/bin/activate
 
 $          python3 -m pip install pip --upgrade
+```
 
 Note :- If you have only python version then , write python command instead of python3 in above commands 
