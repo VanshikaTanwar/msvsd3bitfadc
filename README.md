@@ -5,11 +5,13 @@
 ## ALIGN TOOL Installation 
 
 There are some prerequisites needed before installing the ALIGN Tool 
+'''
 
 1. gcc >=6.1.0(For C++14 support)
 
 2. Python>=3.7
 
+'''
 Note:- In my UBUNTU 22.04 , 
 
 gcc-9 version is Installed
