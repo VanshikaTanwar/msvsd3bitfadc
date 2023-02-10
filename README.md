@@ -162,4 +162,102 @@ $             pip install -v --no-build-isolation -e . –no-deps –install-opt
 
 ![7](https://user-images.githubusercontent.com/90523478/218179561-641c0ddc-4afe-4f99-a1a8-b04f0989e75c.png)
 
+![8](https://user-images.githubusercontent.com/90523478/218182373-fbcb43f9-7b2a-4766-98cf-a6dfd932d511.png)
+
+![9](https://user-images.githubusercontent.com/90523478/218182395-a3ffd729-874b-4c25-a8c5-1dfba0f37465.png)
+
+
+![10](https://user-images.githubusercontent.com/90523478/218182435-f4ba5d6c-62c4-4dcb-afb0-916e570759e3.png)
+
+![11](https://user-images.githubusercontent.com/90523478/218182465-e9a9a773-38eb-409e-8c93-b41a41e5f281.png)
+
+![12](https://user-images.githubusercontent.com/90523478/218182483-7736934b-c7d7-43bb-8605-bfa73092f77c.png)
+
+Making ALIGN Portable to SKY130 technology 
+
+clone the following Repository inside ALIGN-public directory
+
+```
+git clone https://github.com/ALIGN-analoglayout/ALIGN-pdk-sky130
+
+```
+
+
+move SKY130_PDK folder to the following location
+
+/Users/vanshikatanwar/ALIGN-public/pdks 
+
+
+```
+$ Installing Xschem
+
+```
+
+
+Install xchem where you have installed all the tools 
+
+```
+$             git clone https://github.com/StefanSchippers/xschem.git xschem_git   
+$             cd xschem_git
+$              ./configure
+
+```
+![13](https://user-images.githubusercontent.com/90523478/218183068-0adf026f-7248-4890-b81c-e5a3d3ec86c9.png)
+
+![14](https://user-images.githubusercontent.com/90523478/218183138-512da01f-0fe4-42d1-97b3-b17b71822871.png)
+
+
+
+![15](https://user-images.githubusercontent.com/90523478/218183165-4ed28ea9-c4ba-471f-ad32-4d0ac6004c83.png)
+
+
+![16](https://user-images.githubusercontent.com/90523478/218183204-7b5b650e-233f-404d-80d5-154a9d16bc9d.png)
+
+
+(If the above configure command is giving error like xpm not found “Aborted (core dumped)  it means that this library is missing then run this command which is given below :-)
+
+
+```
+$              sudo apt install libxpm-dev 
+
+```  
+Now , run ./configure command 
+
+![17](https://user-images.githubusercontent.com/90523478/218183499-80c7da04-5d4f-4a38-842d-7dad2f0c95fc.png)
+
+
+![18](https://user-images.githubusercontent.com/90523478/218183521-ed53194b-e520-487e-8ff2-55dc70e904af.png)
+
+```
+$              make
+
+```                      
+
+{# if tgis is also giving some error then run this command instead of this make -j$(nproc) }
+
+![19](https://user-images.githubusercontent.com/90523478/218183757-c7a3333f-df76-4929-ae1c-09952f783729.png)
+
+![20](https://user-images.githubusercontent.com/90523478/218183779-9c0a643a-9fcb-4e4a-97f5-46ba0818fd1b.png)
+
+```
+$              sudo make install
+
+```   
+
+![21](https://user-images.githubusercontent.com/90523478/218183988-bc8e7907-23a5-4868-8928-6ec84f0298cb.png)
+
+![22](https://user-images.githubusercontent.com/90523478/218184001-3eb15c37-f801-4268-9262-723cf050ff96.png)
+
+```
+For opening or checking that xschem is installed or not , write this command under xschem_git directory
+
+$                    xschem
+
+This command opens up the xschem on your screen
+
+for closing it write this 
+
+exit
+
+``` 
 
