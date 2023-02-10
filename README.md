@@ -74,4 +74,11 @@ Note :- If you have only python version then , write python command instead of p
    fig.1
 </p>
 
+![2](https://user-images.githubusercontent.com/90523478/218179329-d9b67fea-df29-4b34-9477-d427d31a54e6.png)
+
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/90523478/218179138-8388f0c8-128a-4c60-bdd5-a12925919968.png"></br>
+   fig.2
+</p>
 
