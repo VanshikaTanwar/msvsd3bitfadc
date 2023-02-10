@@ -122,9 +122,40 @@ $             sudo rm /usr/bin/gcc
 
 ![3](https://user-images.githubusercontent.com/90523478/218179438-ecd73ff2-0ed3-41f5-99a7-67039d7efdc6.png)
 
+Now again run this 
+
+```
+$             ls
+$             sudo ln -s /usr/bin/gcc-9 /usr/bin/gcc
+$             gcc –version
+```
+
+It will show now the version of gcc like this as shown below:-
+
 ![4](https://user-images.githubusercontent.com/90523478/218179466-caa605f5-3bdf-4be7-95d5-27489e18ed2c.png)
 
+Now, run that command of installing ALIGN as a user .
+it will successfully run now .
+
+### If you are installing ALIGN as a DEVELOPER:-
+
+
+```
+$             pip install -e .
+```
+
+
 ![5](https://user-images.githubusercontent.com/90523478/218179504-27f487cd-eea4-4092-9815-d70d1f8e74f9.png)
+
+Now, after this installation of either ALIGN as a user or ALIGN as a DEVELOPER then, run these commands :-   
+
+```
+$             pip install setuptools wheel pybind11 scikit-build cmake ninja
+$             pip install -v -e .[test] --no-build-isolation
+$             pip install -v --no-build-isolation -e . –no-deps –install-option=’-DBUILD_TESTING=ON’
+
+```
+
 
 
 ![6](https://user-images.githubusercontent.com/90523478/218179529-6b1f6e14-ea14-4b7e-aff6-c5973c7725fa.png)
