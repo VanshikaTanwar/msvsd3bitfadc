@@ -36,6 +36,8 @@ For installing the align tool , Just follow these steps which are given below:-
 
 Go to Desktop or that directory/path where you want to install the ALIGN Tool and write these commands which is given below:- 
 
+
+```
 $           export CC=/usr/bin/gcc
 
 $           export CXX=/usr/bin/g++
@@ -43,6 +45,8 @@ $           export CXX=/usr/bin/g++
 $            git clone https://github.com/ALIGN-analoglayout/ALIGN-public
 
 $           cd ALIGN-public
+```
+
 
 # Now we need to create a Python virtual environment
 
