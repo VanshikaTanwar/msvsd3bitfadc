@@ -5,7 +5,7 @@
 With a windows, Oracle virtual box (Version 6.0.10 platform) is installed with version of Ubuntu 20.04.1 LTS, 64 bit OS with 5 GB RAM, and 1.05 TB of hard-disk space.  
 
 <p align="center">
-<img src="">
+<img src="https://user-images.githubusercontent.com/90523478/219728037-07064388-2713-468d-871d-a0a08bba5557.jpeg">
 </p> 
 <p align="center">
 Fig  Oracle VM Virtual Box 6.0.10 platform
@@ -15,7 +15,7 @@ Fig  Oracle VM Virtual Box 6.0.10 platform
 2. Note: Click on Windows hosts for Windows.  
 
 <p align="center">
-<img src="">
+<img src="https://user-images.githubusercontent.com/90523478/219728285-c2195b33-974c-41aa-a542-26fbc61f0824.jpeg">
 </p> 
 <p align="center">
 Fig  Ubuntu 22.04.1 window running using Oracle VM VirtualBox
