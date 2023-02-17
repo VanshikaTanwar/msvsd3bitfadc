@@ -27,8 +27,7 @@ Fig  Ubuntu 22.04.1 window running using Oracle VM VirtualBox
 
 # Tools Installation
 
-
-![open_pdk](https://user-images.githubusercontent.com/90523478/219724133-773e499d-feb2-4d60-8dd5-331aef916470.png)
+![open_pdk](https://user-images.githubusercontent.com/90523478/219727055-46f59d02-1586-4349-b834-c401b53bd0e2.png)
 
 - magic
 - ngspice
