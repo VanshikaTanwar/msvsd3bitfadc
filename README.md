@@ -227,6 +227,83 @@ The respective path is given below:-
 /home/vanshikatanwar/Desktop/vsdflow/work/tools/openlane_working_dir/OpenLane/pdks/volare/sky130/versions/9f1c2b06d2b5a6708cfe0b55679c7e84d37220cc/sky130A/libs.tech/ngspice/sky130.lib.spice tt 
 
 
+![image](https://user-images.githubusercontent.com/90523478/219741724-334dece6-95f3-403e-b92e-4d50d8e8b9fe.png)
+
+![image](https://user-images.githubusercontent.com/90523478/219741898-169581ce-6d24-4305-b924-8e8f5c5bedf3.png)
+
+For simulation of your circuit just follow the steps which are given below:-
+
+1.	Insert code_shown.sym and include the analysis with proper time values and with correct library path given for tt .
+
+2.	Go to options, click on “Spice Netlist” or shortcut key is “shift+v” to set spice netlist.
+
+3.	Now, click on Netlist , 
+
+case-1: If nothing opens , it means that it is fine or your circuit has no error.
+
+case-2: If something opens and is showing that #net_pad-unknown like this problem and below is showing a dismiss option , then, it means that your circuit has some issue .
+
+4.	Click on Simulate , your ngspice window opens and after 2-3 seconds circuit become simulated and it starts showing some TEMP, TNOM values and showing some blinking cursor in the same window of ngspice.
+
+5.	Now, for observing the waveform of DC analysis of inverter , just type 
+“plot Vin Vout” in ngspice window and hit enter .
+
+6.	Now, your waveform is successfully displayed in front of you on your screen.
+
+Terminal window after simulation of waveform is shown like this 
+
+![image](https://user-images.githubusercontent.com/90523478/219742411-fc7202cd-76e2-400c-8d96-99ef2ee3bac9.png)
+
+Ngspice window view  after simulation 
+
+write command for waveform display plot Vin Vout
+
+![image](https://user-images.githubusercontent.com/90523478/219742590-b5014311-8803-40ee-a82e-7ac083237a3f.png)
+
+## Waveform displayed of DC Analysis of inverter 
+
+![image](https://user-images.githubusercontent.com/90523478/219742750-b46d4ac2-d9cd-43cb-aa94-a69b065ec584.png)
+
+## Transient Analysis 
+For transient Analysis , change the values in Vin and give pulse . Also, for doing the transient analysis .trans command is used with the values as shown in image 
+
+
+
+Now, simulate the circuit again with same steps as given above 
+
+The ngspice window displayed after simulating the circuit like this 
+
+![image](https://user-images.githubusercontent.com/90523478/219743029-05792eb0-0113-42df-bcc6-b376c0c3efbe.png)
+
+![image](https://user-images.githubusercontent.com/90523478/219743097-cbddd892-8e85-4284-825d-3aeb64e06133.png)
+
+Error occurred during simulation of inverter in Xschem  
+
+1.	It is suggested that for simulation use code_shown.sym instead of code.sym
+
+2.	Try to write everything in single netlist to avoid error at the time of simulation.
+
+3.	If this type of error is occurred like unknown subcircuit model like this then , try some of these solutions ;-
+
+a) Try to remove and connect that component again because there may be a possibility of wire breakage or not proper connection between component . 
+
+b) Try to run the ngspice separately using terminal
+----> for running the ngspice manually just go to that directory where your spice file is generated , actually it is generated inside your home directory that is (i.e., home/.xschem/simulations/) now, under this directory open terminal and type “ngspice xxxxxxxx”
+
+Xxxxxxx= its name of your spice file .
+
+for example in my case , it could be- 
+
+ngspice inverter.spice
+
+4.	Check the location is correct or not of library path 
+check for ngspice folder inside the sky130A/libs.tech directory and inside this ngspice folder check for sky130.lib.spice file.
+
+5.	Also, check for the ngspice folder inside the sky130A/libs.ref directory and inside this under sky130_fd_pr folder check for ngspice folder is there or not . If not then, Give the correct location . 
+
+** For successfully simulation of the inverter circuit in xschem , step 4 and step 5 above should be mandatory for occurrence of no error at the time of simulation.   
+
+
 
 ## ALIGN TOOL Installation 
 
