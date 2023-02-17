@@ -28,6 +28,14 @@ Fig  Ubuntu 22.04.1 window running using Oracle VM VirtualBox
 # Tools Installation
 
 
+![open_pdk](https://user-images.githubusercontent.com/90523478/219724133-773e499d-feb2-4d60-8dd5-331aef916470.png)
+
+- magic
+- ngspice
+- xschem
+- netgen
+- open_pdk
+
 
 ## ALIGN TOOL Installation 
 
