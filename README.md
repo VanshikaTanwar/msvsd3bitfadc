@@ -36,6 +36,198 @@ Fig  Ubuntu 22.04.1 window running using Oracle VM VirtualBox
 - open_pdk
 
 
+
+## magic TOOL Installation
+
+It is an open-source VLSI layout tool.<br /><br />
+Install steps:
+```
+$  git clone git://opencircuitdesign.com/magic
+$  cd magic
+$	 ./configure
+$  make
+$  sudo make install
+```
+More information [http://opencircuitdesign.com/magic/index.html](http://opencircuitdesign.com/magic/index.html)
+
+
+## Netgen
+It is a tool for comparing netlists, a process known as LVS, which stands for "Layout vs. Schematic" <br /><br />
+Install steps:
+```
+$  git clone git://opencircuitdesign.com/netgen
+$  cd netgen
+$	./configure
+$  make
+$  sudo make install
+```
+More information [http://opencircuitdesign.com/netgen/index.html](http://opencircuitdesign.com/netgen/index.html)
+
+## Xschem
+Xschem is a schematic capture program <br /><br />
+Install xchem where you have installed all the tools 
+```
+$             git clone https://github.com/StefanSchippers/xschem.git xschem_git   
+$             cd xschem_git
+$              ./configure
+```
+![image](https://user-images.githubusercontent.com/90523478/219732133-981dd524-2992-46c4-bb71-1fb421493fea.png)
+
+![image](https://user-images.githubusercontent.com/90523478/219732356-66ae0182-80b8-4c38-9c0b-c247240bc389.png)
+
+![image](https://user-images.githubusercontent.com/90523478/219732553-8fcfe182-cc8e-49fb-b809-7499ac3c60db.png)
+
+
+(If the above configure command is giving error like xpm not found “Aborted (core dumped)  it means that this library is missing then run this command which is given below :-)
+
+```
+$	sudo apt install libxpm-dev
+```
+Now , run ./configure command 
+
+![image](https://user-images.githubusercontent.com/90523478/219733178-fa4d27dd-5c81-4f7d-9d2c-49e7d21d9482.png)
+
+![image](https://user-images.githubusercontent.com/90523478/219733392-98846413-493e-42b3-a976-6f3820c1f3ce.png)
+
+
+```
+$  make         {# if tgis is also giving some error then run this command instead of this make -j$(nproc) }
+
+$  sudo make install
+```
+![image](https://user-images.githubusercontent.com/90523478/219733997-9514f268-6fa6-413e-94fe-8851b49ef2a8.png)
+
+![image](https://user-images.githubusercontent.com/90523478/219734107-d0bc3393-4e6c-4f44-b167-ff59219c2852.png)
+
+```
+$  sudo make install
+```
+
+![image](https://user-images.githubusercontent.com/90523478/219734535-a0b02837-d701-44b2-9069-126f9dbec8e6.png)
+
+![image](https://user-images.githubusercontent.com/90523478/219734672-dc151104-55b6-4e92-8e8b-2eef18d5c984.png)
+
+For opening or checking that xschem is installed or not , write this command under xschem_git directory
+
+```
+$  xschem
+
+This command opens up the xschem on your screen
+
+for closing it write this 
+      exit
+
+```
+
+![image](https://user-images.githubusercontent.com/90523478/219735670-bf12cb03-163c-4023-bde3-8a033901a9bd.png)
+
+
+More information [http://repo.hu/projects/xschem/index.html](http://repo.hu/projects/xschem/index.html)
+
+
+
+## open_pdk
+
+Open_PDKs is distributed with files that support the Google/SkyWater sky130 open process description [https://github.com/google/skywater-pdk](https://github.com/google/skywater-pdk). Open_PDKs will set up an environment for using the SkyWater sky130 process with open-source EDA tools and tool flows such as magic, qflow, openlane, netgen, klayout, etc.<br /><br />
+
+Install the Open_PDKS
+```
+$  git clone git://opencircuitdesign.com/open_pdks
+$  open_pdks
+$	./configure --enable-sky130-pdk
+$  make
+$  sudo make install
+```
+
+
+![1 1](https://user-images.githubusercontent.com/88899069/218765374-34f77769-6c97-4bf0-aee4-7b2e59444931.png)
+
+![2](https://user-images.githubusercontent.com/88899069/218765439-510c504e-272f-41e6-aa43-05533be6dc3f.png)
+
+![3](https://user-images.githubusercontent.com/88899069/218765460-ba93bf45-09b0-4c5b-a342-cefae7746734.png)
+
+![4](https://user-images.githubusercontent.com/88899069/218765480-92eaa937-2ed4-492b-ad5b-2c196ec167b0.png)
+
+![5](https://user-images.githubusercontent.com/88899069/218765494-57bd04eb-c1a2-42e0-b0b4-c16ebca70044.png)
+
+
+After the open_pdks is installed , verifying this installation and to do interface this with sky130 just follow the given steps mentioned below:-
+
+1)	Create a folder with any name inside xschem . In my case , I have created a folder with the name xschem_simulations.
+
+2)	Now, go to open_pdks/sky130/sky130A/libs.tech/xschem.
+
+3)	Copy xschemrc file from this location 
+
+4)	Go back to that folder which you have created in {step 1} and paste that xschemrc file inside the xschem_simulations .
+
+5)	Now, open terminal in this xschem_simulations folder and type this command “xschem”
+
+6)	You will notice that a display  has come in which xschem is now launched with all the sky130 processes , now you can proceed and start making your project .
+
+
+## Ngspice
+ngspice is the open-source spice simulator for electric and electronic circuits.<br /><br />
+Install steps:<br />
+
+After downloading the tarball from [https://sourceforge.net/projects/ngspice/files/](https://sourceforge.net/projects/ngspice/files/) to a local directory, unpack it using:
+```
+ $ tar -zxvf ngspice-37.tar.gz
+ $ cd ngspice-37
+ $ mkdir release
+ $ cd release
+ $ ../configure  --with-x --with-readline=yes --disable-debug
+ ```
+
+(If the above configuration command fails with an error such as "xpm not found" or "Aborted (core dumped)", this indicates that the library is missing. If so, perform the command below:-
+
+```
+$	sudo apt-get install libxaw7-dev
+```
+ 
+ Now again run command configure
+ 
+ ```
+ $ ../configure  --with-x --with-readline=yes --disable-debug
+ $ make
+ $ sudo make install
+```
+More information [https://ngspice.sourceforge.io/index.html](https://ngspice.sourceforge.io/index.html)
+
+Please note that to view the simulation graphs of ngspice, xterm is required and can be installed using.
+```
+$ sudo apt-get update
+$ sudo apt-get install xterm
+```
+
+
+Now that we have all the necessary tools installed let's understand the design flow!
+
+
+#  Pre-layout simulation of CMOS inverter using xschem and ngspice
+
+![image](https://user-images.githubusercontent.com/90523478/219739258-f316567c-ce4a-4535-8508-e3fdb716ab26.png)
+
+![image](https://user-images.githubusercontent.com/90523478/219739432-c9e11c1b-4490-4e6a-bfa0-93a0a5673074.png)
+
+![image](https://user-images.githubusercontent.com/90523478/219739696-3c5cc9a7-1bc2-4efb-a042-316e7d5ab3f1.png)
+
+Now, after the complete creation of inverter using CMOS , we need to simulate the circuit. For, that we need to add the code_shown.sym in which we insert the library path of sky130 tech node and also , specify which analysis one wants to do with proper time for simulation given. 
+
+As, for this inverter circuit I need to do its DC analysis , so, for performing DC analysis .dc command is used with proper time values given . The format of the analysis is such that:-
+
+.dc start_time stop_time step_time
+
+.dc 0 1.8 0.01
+
+Now, we also need to insert the library path of sky130 technology of sky130.lib.spice tt file inside this SPICE File of code_shown.sym
+
+The respective path is given below:-
+
+/home/vanshikatanwar/Desktop/vsdflow/work/tools/openlane_working_dir/OpenLane/pdks/volare/sky130/versions/9f1c2b06d2b5a6708cfe0b55679c7e84d37220cc/sky130A/libs.tech/ngspice/sky130.lib.spice tt 
+
+
+
 ## ALIGN TOOL Installation 
 
 There are some prerequisites needed before installing the ALIGN Tool 
