@@ -63,4 +63,23 @@ EXAMPLE 1:
     $schematic2layout.py ../ALIGN-pdk-sky130/examples/five_transistor_ota -p ../pdks/SKY130_PDK/
     
 ```
+## 3. Simulation of Function 
+### 3.a. Pre-layout Characterization using Xschem/Ngspice
+
+Schematic of given function ‘Y’ using Xschem tool.
+For performing the week 1 work open the week 1 directory means open the xschem using sky130A technology Write these commands inside that xschem folder which we have crated in week 0:-
+```
+cd xschem_labs
+xschem
+```
+Now, the xschem become opens and the next step is that we need to implement the given function in xschem as shown in the figure below:-
+
+<p align="center">
+<img src="![image](https://user-images.githubusercontent.com/90523478/221251594-48522d24-1391-4799-a040-2f7e3bb89e5a.png)
+">
+</p> 
+<p align="center">
+Fig  Function circuit in xschem 
+</p>
+
 
