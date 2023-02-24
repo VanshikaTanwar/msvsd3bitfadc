@@ -148,3 +148,29 @@ Combine Input-Output waveform of Function Fn
 <p align="center">
 Fig  Combine Input-Output waveform of Fn circuit  
 </p>
+
+
+### 3.b. Post-layout Characterization using Magic/Ngspice
+
+For performing the post layout characterization of Function Fn first we need to extract the generated spice file(Spice File which is generated from xschem simulation of Fn circuit) into the magic tool.
+
+For open the spice file in magic , follow the steps which are given below:
+
+1)Open up the mag folder which we have created in week 0
+2)open magic
+3)Go to File--->Import spice
+4)/home/vanshikatanwar/.xschem/simulations
+5)Func.spice
+6)Click on okay
+7)Go to windows in magic and click on Full view
+8)Your Function Fn layout displaces in magic
+
+Image is shown below:-
+
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/221257832-e13faff1-b790-4730-95fe-4cdcbec5fa51.png">
+</p> 
+<p align="center">
+Fig  Layout view of Function Fn in magic tool 
+</p>
+
