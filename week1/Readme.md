@@ -174,3 +174,4 @@ Image is shown below:-
 Fig  Layout view of Function Fn in magic tool 
 </p>
 
+In Progress
