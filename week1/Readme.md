@@ -81,4 +81,70 @@ Now, the xschem become opens and the next step is that we need to implement the 
 Fig  Function circuit in xschem 
 </p>
 
+Zoom in view of Fn diagram in xschem:-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/221252001-75167655-d103-4a48-89b7-5740131b7f2d.png">
+</p> 
+<p align="center">
+Fig  Zoom-in view of Function circuit in xschem 
+</p>
 
+Now, for running the simulation of Fn function just go to topmost right side corner and click on “Netlist”
+Nothing opens up after that click on "Simulate" .
+After , clicking on simulate the ngspice window opens and wait for some seconds like 2-5-6 secs then , it simulated and shows/displays like this as shown in the image below:-
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/221252304-635f5652-516d-4b24-a71e-9c0c966ab3f6.png">
+</p> 
+<p align="center">
+Fig  ngspice window view after simulate the Fn circuit in xschem
+</p>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/221252701-74661028-abe8-425c-9ca0-00180b25d2e8.png">
+</p> 
+<p align="center">
+Fig  ngspice window view after simulate the Fn circuit in xschem
+</p>
+
+Now, for observing the waveform of A,B,C,D,E,F(i.e., Input waveform) and Y(output waveform)
+Write these commands in ngspice window which opens up :
+ plot V(A)+6 V(B)+12 V(C)+18 V(D)+24 V(E)+30 V(F)+36               For observing the input waveform
+ plot v(Y)                                                         For observing the output waveform
+ 
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/221253568-e01d6d0a-acb8-47d3-a677-40ab5a8d1220.png
+">
+</p> 
+<p align="center">
+Fig  ngspice window view for executing plot commmand for displaying waveform
+</p>
+
+
+Input Waveform
+
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/221254276-44e7a7c3-caa1-4044-accb-78fcaec42bfb.png">
+</p> 
+<p align="center">
+Fig  Input waveform of the Fn circuit
+</p>
+
+
+Output Waveform
+
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/221254386-59642d43-4ea9-492d-9788-327bee60a603.png">
+</p> 
+<p align="center">
+Fig  Output waveform of the Fn circuit 
+</p>
+
+Combine Input-Output waveform of Function Fn
+
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/221254548-b4525fe5-72f3-481b-a826-2396a8a06ec7.png">
+</p> 
+<p align="center">
+Fig  Combine Input-Output waveform of Fn circuit  
+</p>
