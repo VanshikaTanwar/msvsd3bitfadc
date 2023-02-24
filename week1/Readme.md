@@ -75,8 +75,7 @@ xschem
 Now, the xschem become opens and the next step is that we need to implement the given function in xschem as shown in the figure below:-
 
 <p align="center">
-<img src="![image](https://user-images.githubusercontent.com/90523478/221251594-48522d24-1391-4799-a040-2f7e3bb89e5a.png)
-">
+<img src="https://user-images.githubusercontent.com/90523478/221251594-48522d24-1391-4799-a040-2f7e3bb89e5a.png">
 </p> 
 <p align="center">
 Fig  Function circuit in xschem 
