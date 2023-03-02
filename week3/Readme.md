@@ -24,6 +24,11 @@ So, A ring Oscillator is a type of device which contains an odd number of NOT ga
 
 The NOT Gate in Ring Oscillator is connected in such a way that the output of first inverter is the input of second inverter and so on .
 
+ <p align="center">
 <img src="https://user-images.githubusercontent.com/90523478/222474161-05dade18-08f5-4fc3-b0b0-0faf80a0edd6.png">
+ </p> 
+<p align="center">
+Fig 1 Ring Oscillator   
+</p>
 
 
