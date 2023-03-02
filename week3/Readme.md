@@ -76,5 +76,25 @@ Vdd VDD GND 1.8
 .GLOBAL VDD
 .end
 ```
+Simulated Result of Ring Oscillator in Xschem with transient Analysis 
+
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222481304-91b7f761-9c0f-4ab3-90cd-989b85fb4bc7.png">
+ </p> 
+<p align="center">
+Fig 3 Ngspice Window view at the time of simulation    
+</p>
+
+--> Waveform Displayed after Simulation 
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222482026-81b3047a-841e-47af-aee0-a4fac61d0fee.png">
+ </p> 
+<p align="center">
+Fig 3 Waveform displayed of 3 -phase Ring Oscillator after simulation     
+</p>
+
+
 
 
