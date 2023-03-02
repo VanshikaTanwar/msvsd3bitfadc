@@ -20,8 +20,10 @@ Ring Oscillator
 
 As , it's name suggest ring oscillator in which ring means a type of closed network or a loop with some feedback something and oscillator means something which oscillates between any two or different values.
 
-So, A ring Oscillator is a type of device which contains an odd number of NOT gates in series connected with each other one after another in a loop whose output is oscillated between two values i.e., between two voltage levels High and Low  or (1 or 0).
+So, A ring Oscillator is a type of device which contains an odd number of NOT gates in series connected with each other one after another in a loop whose output is oscillated between two values i.e., between two voltage levels High and Low  or (1 or 0) without any External Input provided .
 
 The NOT Gate in Ring Oscillator is connected in such a way that the output of first inverter is the input of second inverter and so on .
+
+<img src="https://user-images.githubusercontent.com/90523478/222474161-05dade18-08f5-4fc3-b0b0-0faf80a0edd6.png">
 
 
