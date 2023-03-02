@@ -31,4 +31,11 @@ The NOT Gate in Ring Oscillator is connected in such a way that the output of fi
 Fig 1 Ring Oscillator   
 </p>
 
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222474161-05dade18-08f5-4fc3-b0b0-0faf80a0edd6.png">
+ </p> 
+<p align="center">
+Fig 1 Ring Oscillator circuit Diagram in Xschem  
+</p>
+
 
