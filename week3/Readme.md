@@ -77,6 +77,34 @@ Vdd VDD GND 1.8
 .end
 ```
 
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Click to display items</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="toggleItems()">Click me</button>
+    <ul id="items" class="hidden">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <script>
+      function toggleItems() {
+        var items = document.getElementById("items");
+        if (items.classList.contains("hidden")) {
+          items.classList.remove("hidden");
+        } else {
+          items.classList.add("hidden");
+        }
+      }
+    </script>
+  </body>
+</html>
 
 
