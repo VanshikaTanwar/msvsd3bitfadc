@@ -100,12 +100,12 @@ Fig 4 Waveform displayed of 3 -phase Ring Oscillator after simulation
 
 Now, our next step is to generate the layout of ring oscillator using ALIGN Tool . For  generating it we need to follow some steps : -
 
-1) We first need to do some changes in the netlist which we got from the xschem as this netlist is given in the input of ALIGN Tool.
-2) After done changes in the netlist , save that netlist with ".sp" extension under the ALIGN-public/ALIGN-pdk-sky130/examples/ring_osc directory 
+   1) We first need to do some changes in the netlist which we got from the xschem as this netlist is given in the input of ALIGN Tool.
+   2) After done changes in the netlist , save that netlist with ".sp" extension under the ALIGN-public/ALIGN-pdk-sky130/examples/ring_osc directory 
 
     As, in my case I have first created the folder with the name "*ring_osc*" under the directory  /Desktop/vsd_3FADC/ALIGN-public/ALIGN-pdk-sky130/examples and then,     save the modified netlist under this *ALIGN-public/ALIGN-pdk-sky130/examples/ring_osc* directory with the name "*ring_osc.sp*".
     
-3) Now, after saving the modified netlist, we need to run the ALIGN Layout Generator for our design Ring Oscillator using these commands:
+   3) Now, after saving the modified netlist, we need to run the ALIGN Layout Generator for our design Ring Oscillator using these commands:
     
     First go under this directory - /Desktop/vsd_3FADC/ALIGN-public
     and then, run the folowing commands which are given below: -
@@ -114,13 +114,13 @@ Now, our next step is to generate the layout of ring oscillator using ALIGN Tool
     cd work
     schematic2layout.py ../ALIGN-pdk-sky130/examples/ring_osc -p ../pdks/SKY130_PDK/
     ```
-    4) After , running this command, the GDS and LEF file is generated under work directory of ALIGN-public directory .
-    5) We will use klayout for observing the generated GDS and LEF file.
-    6) And , also after this we need to open the .GDS file of Ring Oscillator which we get from ALIGN Tool in Magic also, for observing the Layout of Ring Oscillator.
+   4) After , running this command, the GDS and LEF file is generated under work directory of ALIGN-public directory .
+   5) We will use klayout for observing the generated GDS and LEF file.
+   6) And , also after this we need to open the .GDS file of Ring Oscillator which we get from ALIGN Tool in Magic also, for observing the Layout of Ring Oscillator.
        For opening the GDS file in magic , First open the Magic Tool with sky130 tech and then go to *File-->Read GDS -->Go to the file location          
        /home/vanshikatanwar/Desktop/vsd_3FADC/ALIGN-public/work* select *RING_OSC_0.python.gds* file and click on *Open* it. 
        Then, it opens up the layout of Ring oscilator in magic and press i so , that the whole layout is selected .
-    7) Now , we need to extract the Spice Netlist from ALIGN Layout . For extrating the netlist , go to Tkcon window and write the following commands which are given below: -
+   7) Now , we need to extract the Spice Netlist from ALIGN Layout . For extrating the netlist , go to Tkcon window and write the following commands which are given below: -
         ```
         extract do local
         extract all
@@ -128,12 +128,12 @@ Now, our next step is to generate the layout of ring oscillator using ALIGN Tool
         ext2spice cthresh 0 rthresh 0
         ext2spice
         ```
-      8) Now, modify the extracted netlist from ALIGN Layout means we need to modify that netlist which is just extracted from magic tool using above commands 
-      9) Just copy and paste the content of xschem generated spice netlist into the above generated netlist . And after modifying save that netlist.
-      10) Now, open the new terminal and open Ngspice in that terminal by executing this command "ngspice" the Ngspice terminal window opens up 
-      11) Now, open your modified ring oscillator spice file uisng this command "*modified_RING_OSC.spice*" 
-      12) Then, *run* execute this in Ngspice window itself.
-      13)  After this *Plot Vout* run this command and then your waveform will be displayed in front of you.
-      14)  Match the genrated waveform wih the waveform generated from xschem . If both waveform matches then, you can proceed to next step if not then, first solve
+   8) Now, modify the extracted netlist from ALIGN Layout means we need to modify that netlist which is just extracted from magic tool using above commands 
+   9) Just copy and paste the content of xschem generated spice netlist into the above generated netlist . And after modifying save that netlist.
+   10) Now, open the new terminal and open Ngspice in that terminal by executing this command "ngspice" the Ngspice terminal window opens up 
+   11) Now, open your modified ring oscillator spice file uisng this command "*modified_RING_OSC.spice*" 
+   12) Then, *run* execute this in Ngspice window itself.
+   13)  After this *Plot Vout* run this command and then your waveform will be displayed in front of you.
+   14)  Match the genrated waveform wih the waveform generated from xschem . If both waveform matches then, you can proceed to next step if not then, first solve
            the error and then move to further steps .
          
