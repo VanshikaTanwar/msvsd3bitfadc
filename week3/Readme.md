@@ -103,7 +103,7 @@ Now, our next step is to generate the layout of ring oscillator using ALIGN Tool
    1) We first need to do some changes in the netlist which we got from the xschem as this netlist is given in the input of ALIGN Tool.
    2) After done changes in the netlist , save that netlist with ".sp" extension under the ALIGN-public/ALIGN-pdk-sky130/examples/ring_osc directory 
 
-    As, in my case I have first created the folder with the name "*ring_osc*" under the directory  /Desktop/vsd_3FADC/ALIGN-public/ALIGN-pdk-sky130/examples and then,     save the modified netlist under this *ALIGN-public/ALIGN-pdk-sky130/examples/ring_osc* directory with the name "*ring_osc.sp*".
+   As, in my case I have first created the folder with the name "*ring_osc*" under the directory  /Desktop/vsd_3FADC/ALIGN-public/ALIGN-pdk-sky130/examples and then,    save the modified netlist under this *ALIGN-public/ALIGN-pdk-sky130/examples/ring_osc* directory with the name "*ring_osc.sp*".
     
    3) Now, after saving the modified netlist, we need to run the ALIGN Layout Generator for our design Ring Oscillator using these commands:
     
@@ -137,3 +137,216 @@ Now, our next step is to generate the layout of ring oscillator using ALIGN Tool
    14)  Match the genrated waveform wih the waveform generated from xschem . If both waveform matches then, you can proceed to next step if not then, first solve
            the error and then move to further steps .
          
+         
+         ### Below are the Steps by steps process shown with SS of the steps which I have explained above: 
+         
+         Step 1 Modified Netlist of ring_osc for ALIGN TOOL Input
+
+          .subckt ring_osc Vout VDD GND
+          XM1 net1 Vout VDD VDD sky130_fd_pr__pfet_01v8 L=150e-09 W=10.5e-7 nf=2
+          XM2 net2 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=150e-09 W=10.5e-7 nf=2
+          XM3 Vout net2 VDD VDD sky130_fd_pr__pfet_01v8 L=150e-09 W=10.5e-7 nf=2
+          XM4 net1 Vout GND GND sky130_fd_pr__nfet_01v8 L=150e-09 W=10.5e-7 nf=2
+          XM5 net2 net1 GND GND sky130_fd_pr__nfet_01v8 L=150e-09 W=10.5e-7 nf=2
+          XM6 Vout net2 GND GND sky130_fd_pr__nfet_01v8 L=150e-09 W=10.5e-7 nf=2
+          .ends ring_osc
+          
+          Step 2  Modified Netlist save
+          
+          Save the modified netlist under this *ALIGN-public/ALIGN-pdk-sky130/examples/ring_osc* directory with the name "*ring_osc.sp*".
+          
+          Step 3 Running the ALIGN Tool Generator for our design Ring oscillator
+          
+          <p align="center">
+          <img src="https://user-images.githubusercontent.com/90523478/222552307-a0390369-21ef-4cfd-b466-b573b0270cf8.png">
+          </p> 
+          <p align="center">
+                Fig 5  Running the ALIGN Tool Generator    
+          </p>
+          
+          <p align="center">
+          <img src="https://user-images.githubusercontent.com/90523478/222553097-87c1aa01-1d04-4f08-9be9-2a9d923de721.png">
+          </p> 
+          <p align="center">
+                Fig 6  Running the ALIGN Tool Generator
+          </p>
+          
+          Step 4 Generated GDS and LEF under work directory 
+          
+          <p align="center">
+          <img src="https://user-images.githubusercontent.com/90523478/222554094-efc4c25f-c072-4e08-a45b-1ecae29cf840.png">
+          </p> 
+          <p align="center">
+                Fig 7  Generated GDS and LEF file under work directory
+          </p>
+          
+          Step 5 Klayout Observation of GDS and LEF File
+           
+          <p align="center">
+          <img src="https://user-images.githubusercontent.com/90523478/222555535-7ab6f844-18e9-4113-bb6b-d05b8cd36537.png">
+          </p> 
+          <p align="center">
+                Fig 8  .GDS file view in Klayout
+          </p>
+          
+          
+          <p align="center">
+          <img src="https://user-images.githubusercontent.com/90523478/222556031-a76636d3-a75f-421c-8e8f-4cd726d7443e.png">
+          </p> 
+          <p align="center">
+                Fig 9  .python.GDS file view in Klayout
+          </p>
+          
+          <p align="center">
+          <img src="https://user-images.githubusercontent.com/90523478/222556256-681e028d-11f7-455b-99c0-e0dd997a23ef.png">
+          </p> 
+          <p align="center">
+                Fig 10  .LEF file view in Klayout
+          </p>
+          
+          Step 6 Opening of Layout of RING OSCILLATOR .i.e., .gds file in Magic Tool
+          
+          <p align="center">
+          <img src="https://user-images.githubusercontent.com/90523478/222558179-c458c08d-111c-4f7b-a0a8-e3debc827f17.png">
+          </p> 
+          <p align="center">
+                Fig 11  Opening of .GDS file view in Magic Tool
+          </p> 
+          
+          
+          <p align="center">
+          <img src="https://user-images.githubusercontent.com/90523478/222557196-65126ea4-8370-4597-bff8-a946b84a436f.png">
+          <img src="https://user-images.githubusercontent.com/90523478/222558041-579c5dc2-2b5e-4cd1-803d-2dcefd50757d.png">
+          </p> 
+          <p align="center">
+                Fig 12  Zoom in view of .GDS file in Magic Tool
+          </p> 
+          
+         Step 7 Extracting the netlist of gds file (layout of ring oscillator which opens in Magic Tool)
+         
+         <p align="center">
+          <img src="https://user-images.githubusercontent.com/90523478/222560246-5848d8c9-265c-4e61-ad86-7f2aa4500fc5.png">
+          </p> 
+          <p align="center">
+                Fig 13  Tkcon window view for extracting the Netlist 
+          </p>
+          
+         Extracted Netlist from ALIGN Layout is shown below:-
+          ```
+          * NGSPICE file created from RING_OSC.ext - technology: sky130A
+
+          .subckt RING_OSC
+           X0 a_488_3864# a_230_840# a_147_840# a_147_840# sky130_fd_pr__nfet_01v8 ad=0.147 pd=1.33 as=0.27825 ps=2.63 w=1.05 l=0.15
+           X1 a_147_840# a_488_3864# a_200_561# a_147_840# sky130_fd_pr__nfet_01v8 ad=0.27825 pd=2.63 as=0.147 ps=1.33 w=1.05 l=0.15
+           X2 a_147_840# a_230_840# a_488_3864# a_147_840# sky130_fd_pr__nfet_01v8 ad=0.27825 pd=2.63 as=0.147 ps=1.33 w=1.05 l=0.15
+           X3 a_200_561# a_488_3864# w_0_1512# w_0_1512# sky130_fd_pr__pfet_01v8 ad=0.147 pd=1.33 as=0.27825 ps=2.63 w=1.05 l=0.15
+           X4 a_230_840# a_200_561# w_0_1512# w_0_1512# sky130_fd_pr__pfet_01v8 ad=0.147 pd=1.33 as=0.27825 ps=2.63 w=1.05 l=0.15
+           X5 w_0_1512# a_488_3864# a_200_561# w_0_1512# sky130_fd_pr__pfet_01v8 ad=0.27825 pd=2.63 as=0.147 ps=1.33 w=1.05 l=0.15
+           X6 w_0_1512# a_200_561# a_230_840# w_0_1512# sky130_fd_pr__pfet_01v8 ad=0.27825 pd=2.63 as=0.147 ps=1.33 w=1.05 l=0.15
+           X7 a_230_840# a_200_561# a_147_840# a_147_840# sky130_fd_pr__nfet_01v8 ad=0.147 pd=1.33 as=0.27825 ps=2.63 w=1.05 l=0.15
+           X8 a_147_840# a_200_561# a_230_840# a_147_840# sky130_fd_pr__nfet_01v8 ad=0.27825 pd=2.63 as=0.147 ps=1.33 w=1.05 l=0.15
+           X9 a_488_3864# a_230_840# w_0_1512# w_0_1512# sky130_fd_pr__pfet_01v8 ad=0.147 pd=1.33 as=0.27825 ps=2.63 w=1.05 l=0.15
+           X10 a_200_561# a_488_3864# a_147_840# a_147_840# sky130_fd_pr__nfet_01v8 ad=0.147 pd=1.33 as=0.27825 ps=2.63 w=1.05 l=0.15
+           X11 w_0_1512# a_230_840# a_488_3864# w_0_1512# sky130_fd_pr__pfet_01v8 ad=0.27825 pd=2.63 as=0.147 ps=1.33 w=1.05 l=0.15
+           C0 a_200_561# a_230_840# 0.58fF
+           C1 a_488_3864# a_230_840# 0.47fF
+           C2 a_200_561# a_488_3864# 0.60fF
+           C3 a_230_840# w_0_1512# 3.37fF
+           C4 a_200_561# w_0_1512# 3.05fF
+           C5 a_488_3864# w_0_1512# 2.79fF
+           C6 a_200_561# a_147_840# 0.42fF
+           C7 a_488_3864# a_147_840# 2.20fF
+           C8 a_230_840# a_147_840# 1.78fF
+           C9 w_0_1512# a_147_840# 7.62fF
+           .ends
+           ```
+                                       
+           
+           Step 8 and Step 9 Modifying the extracted Netlist from ALIGN Layout and saving that modified netlist 
+          
+          Modified netlist is shown below:-
+      
+                  ```
+                            * NGSPICE file created from RING_OSC.ext - technology: sky130A
+                            ** sch_path: /home/vanshikatanwar/Desktop/Lab_1/xschem_lab/ring_osc.sch
+                            **.subckt ring_osc
+                            XM1 net1 Vout VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+                            + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
+                            + sa=0 sb=0 sd=0 mult=1 m=1
+                            XM2 net2 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+                            + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
+                            + sa=0 sb=0 sd=0 mult=1 m=1
+                            XM3 Vout net2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+                            + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
+                            + sa=0 sb=0 sd=0 mult=1 m=1
+                            XM4 net1 Vout GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+                            + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
+                            + sa=0 sb=0 sd=0 mult=1 m=1
+                            XM5 net2 net1 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+                            + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
+                            + sa=0 sb=0 sd=0 mult=1 m=1
+                            XM6 Vout net2 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+                            + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
+                            + sa=0 sb=0 sd=0 mult=1 m=1
+                            Vdd VDD GND 1.8
+                            .save i(vdd)
+                            ** begin user architecture code
+
+                            .tran 4ps 5ns 0
+                            .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+                            .save all
+
+
+                             ** end user architecture code
+                             **.ends
+                             .GLOBAL GND
+                             .GLOBAL VDD
+                             .end
+
+                           .subckt RING_OSC
+                           X0 a_488_3864# a_230_840# a_147_840# a_147_840# sky130_fd_pr__nfet_01v8 ad=0.147 pd=1.33 as=0.27825 ps=2.63 w=1.05 l=0.15
+                           X1 a_147_840# a_488_3864# a_200_561# a_147_840# sky130_fd_pr__nfet_01v8 ad=0.27825 pd=2.63 as=0.147 ps=1.33 w=1.05 l=0.15
+                           X2 a_147_840# a_230_840# a_488_3864# a_147_840# sky130_fd_pr__nfet_01v8 ad=0.27825 pd=2.63 as=0.147 ps=1.33 w=1.05 l=0.15
+                           X3 a_200_561# a_488_3864# w_0_1512# w_0_1512# sky130_fd_pr__pfet_01v8 ad=0.147 pd=1.33 as=0.27825 ps=2.63 w=1.05 l=0.15
+                           X4 a_230_840# a_200_561# w_0_1512# w_0_1512# sky130_fd_pr__pfet_01v8 ad=0.147 pd=1.33 as=0.27825 ps=2.63 w=1.05 l=0.15
+                           X5 w_0_1512# a_488_3864# a_200_561# w_0_1512# sky130_fd_pr__pfet_01v8 ad=0.27825 pd=2.63 as=0.147 ps=1.33 w=1.05 l=0.15
+                           X6 w_0_1512# a_200_561# a_230_840# w_0_1512# sky130_fd_pr__pfet_01v8 ad=0.27825 pd=2.63 as=0.147 ps=1.33 w=1.05 l=0.15
+                           X7 a_230_840# a_200_561# a_147_840# a_147_840# sky130_fd_pr__nfet_01v8 ad=0.147 pd=1.33 as=0.27825 ps=2.63 w=1.05 l=0.15
+                           X8 a_147_840# a_200_561# a_230_840# a_147_840# sky130_fd_pr__nfet_01v8 ad=0.27825 pd=2.63 as=0.147 ps=1.33 w=1.05 l=0.15
+                           X9 a_488_3864# a_230_840# w_0_1512# w_0_1512# sky130_fd_pr__pfet_01v8 ad=0.147 pd=1.33 as=0.27825 ps=2.63 w=1.05 l=0.15
+                           X10 a_200_561# a_488_3864# a_147_840# a_147_840# sky130_fd_pr__nfet_01v8 ad=0.147 pd=1.33 as=0.27825 ps=2.63 w=1.05 l=0.15
+                           X11 w_0_1512# a_230_840# a_488_3864# w_0_1512# sky130_fd_pr__pfet_01v8 ad=0.27825 pd=2.63 as=0.147 ps=1.33 w=1.05 l=0.15
+                           C0 a_200_561# a_230_840# 0.58fF
+                           C1 a_488_3864# a_230_840# 0.47fF
+                           C2 a_200_561# a_488_3864# 0.60fF
+                           C3 a_230_840# w_0_1512# 3.37fF
+                           C4 a_200_561# w_0_1512# 3.05fF
+                           C5 a_488_3864# w_0_1512# 2.79fF
+                           C6 a_200_561# a_147_840# 0.42fF
+                           C7 a_488_3864# a_147_840# 2.20fF
+                           C8 a_230_840# a_147_840# 1.78fF
+                           C9 w_0_1512# a_147_840# 7.62fF
+
+                           .ends
+                            ```
+
+
+             
+           Step 10, 11 and 12 execution of Spice File in Ngspice is shown below :-
+
+          <p align="center">
+          <img src="https://user-images.githubusercontent.com/90523478/222564945-7f327f35-2436-4211-9130-fe4226fc1172.png">
+          </p> 
+          <p align="center">
+                Fig 14  Modified Spice File execution  in Ngspice window  
+          </p>
+
+           Step 13 Output Waveform From Above POST Layout simulation using ALIGN Tool.
+            <p align="center">
+            <img src="https://user-images.githubusercontent.com/90523478/222568920-3a1c0e7f-c2f2-4d21-b691-120973ebd759.png">
+            </p> 
+            <p align="center">
+             Fig 15  Waveform obtained from modified netlist from above Post Layout Simulation using ALIGN Tool  
+             </p>             
+                        
+                        
