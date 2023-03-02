@@ -32,7 +32,7 @@ Fig 1 Ring Oscillator
 </p>
 
  <p align="center">
-<img src="https://user-images.githubusercontent.com/90523478/222474161-05dade18-08f5-4fc3-b0b0-0faf80a0edd6.png">
+<img src="https://user-images.githubusercontent.com/90523478/222475624-b3e9c59c-3be6-4765-b623-df352d7003fb.png">
  </p> 
 <p align="center">
 Fig 1 Ring Oscillator circuit Diagram in Xschem  
