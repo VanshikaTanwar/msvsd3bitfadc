@@ -92,7 +92,7 @@ Fig 3 Ngspice Window view at the time of simulation
 <img src="https://user-images.githubusercontent.com/90523478/222482026-81b3047a-841e-47af-aee0-a4fac61d0fee.png">
  </p> 
 <p align="center">
-Fig 3 Waveform displayed of 3 -phase Ring Oscillator after simulation     
+Fig 4 Waveform displayed of 3 -phase Ring Oscillator after simulation     
 </p>
 
 
