@@ -41,3 +41,27 @@ The physical implementation of the analog blocks in the circuit is done using tw
 2. SLC cell, containing the Split-Control Level Converter.
 
 The gds and lef files of HEADER and SLC cells are pre-created before the start of the Generator flow.
+
+
+
+#### OpenFASOC flow for Temperature Sensor Generation
+To configure circuit specifications, modify the test.json specfile in the generators/temp-sense-gen/ folder.
+
+To run the default generator, cd into openfasoc/generators/temp-sense-gen/ and execute the following command:
+
+`make sky130hd_temp`
+
+The default circuit’s physical design generation can be divided into three parts:
+
+1. Verilog generation
+
+2. RTL-to-GDS flow (OpenROAD)
+
+3. Post-layout verification (DRC and LVS)
+
+## Verilog Generation
+To run verilog generation, type the command `make sky130hd_temp_verilog`
+
+https://user-images.githubusercontent.com/90523478/222925421-bcc05d7a-82f2-4d55-ac65-e27c93cb9058.png
+
+
