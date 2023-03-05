@@ -64,8 +64,23 @@ The default circuit’s physical design generation can be divided into three par
 3. Post-layout verification (DRC and LVS)
 
 ## Verilog Generation
-To run verilog generation, type the command `make sky130hd_temp_verilog`
+To run verilog generation, type the command `make sky130hd_temp_verilog` . The screenshot is attached below...
 
+In the given figure below, it is showing that , the tool is trying to minimize the error, by varying the number of inverters and headers for the given range of temperature.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222952771-bdebdf4e-0b3a-4cf9-8013-c57272b0436c.png">
+ </p> 
+
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222952812-434f0ea7-129d-4833-ab55-1bf99a4974f9.png">
+ </p> 
+
+The test.json file displays corresponds to the temp_sense_gen.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222953925-b12f35ef-f9d8-45fe-8955-740a90f3781b.png">
+ </p>
 
 
 
