@@ -159,16 +159,23 @@ This above image shows that two other files : add_ndr_rules.tcl , which adds an 
 The Global Route power and area report is shwon below:
 <p align="center">
 <img src="https://user-images.githubusercontent.com/90523478/222967339-4c09be55-e87e-46e5-b62b-aa863963e7b3.png">
- </p>
+<img src="https://user-images.githubusercontent.com/90523478/222967433-7cb50f75-c6ee-45e8-b59f-b183d8b31edd.png">
+<img src="https://user-images.githubusercontent.com/90523478/222967604-55e61a05-914c-4cf5-a959-72b41fedcaf7.png">
+<img src="https://user-images.githubusercontent.com/90523478/222967683-512cf0b7-d28c-43bf-a2cd-30acc416e00b.png">
+<img src=https://user-images.githubusercontent.com/90523478/222967756-fa3e50fe-82e6-40b9-a85a-ac9d7c373a60.png">
+</p>
  
 
 Detail_route.tcl is shown below :
+                                                                                                               
 <p align="center">
-<img src="https://user-images.githubusercontent.com/90523478/222967087-7815827e-cd03-44db-a7c4-22c080f89610.png">
- <img src="https://user-images.githubusercontent.com/90523478/222967433-7cb50f75-c6ee-45e8-b59f-b183d8b31edd.png">
+<img src="https://user-images.githubusercontent.com/90523478/222966063-b5f795b1-cce6-47bc-a5cf-0d7d120e934f.png">
  </p>
 
-The Deatiled 
+                                                                                                                
+                                                                                                                
+                                                                                                                
+ 
 
 
 
