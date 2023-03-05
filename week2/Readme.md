@@ -51,6 +51,10 @@ To run the default generator, cd into openfasoc/generators/temp-sense-gen/ and e
 
 `make sky130hd_temp`
 
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222925421-bcc05d7a-82f2-4d55-ac65-e27c93cb9058.png">
+ </p> 
+
 The default circuit’s physical design generation can be divided into three parts:
 
 1. Verilog generation
@@ -62,6 +66,8 @@ The default circuit’s physical design generation can be divided into three par
 ## Verilog Generation
 To run verilog generation, type the command `make sky130hd_temp_verilog`
 
-https://user-images.githubusercontent.com/90523478/222925421-bcc05d7a-82f2-4d55-ac65-e27c93cb9058.png
+
+
+
 
 
