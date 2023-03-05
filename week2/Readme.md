@@ -82,6 +82,79 @@ The test.json file displays corresponds to the temp_sense_gen.
 <img src="https://user-images.githubusercontent.com/90523478/222953925-b12f35ef-f9d8-45fe-8955-740a90f3781b.png">
  </p>
 
+In the above json file , as it can be observed that temperature is being varied from -20 C to 100 C range . Based on the range given , the generator calculates the number of header and inverters to minimize the error . 
+
+
+The number of inverters in the ring oscillator  and of HEADER cells in parallel are optimized using a nearest neighbour approach with experimental data from models/modelfile.csv.
+
+## Synthesis 
+
+The OpenROAD Flow starts with a flow configuration files which is config.mk , the choosen platform is sky130hd and the verilog files are generated from the previous part. The config.mk file is given below:-
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222963573-1c05ef0d-3c21-43ec-8979-9458940b0d88.png">
+ </p>
+
+The synthesis has been ran using Yosys to find the implementation of circuit appropriately from the availabe cells in the platform. The synthesized verilog netlist is saved and is shown in the below figure :- 
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222963979-30367ac5-751a-4855-92c5-2225a38f7206.png">
+ </p>
+ 
+ ## Floorplan 
+ 
+ For the physical Design the floorplan is generated with OpenROAD , which requires a description of the power delivery network in pdn.cfg
+ 
+ The Floorplan 
+ The floorplan final power report is shown in the image given below:
+
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222964402-8d9dd9a6-5686-4620-bd5b-b03f8f442882.png">
+ </p>
+
+This temperature sensor design basically implements the two voltage domain one for the VDD that power ups the most of the circuit and another is for the VIN that power ups the ring oscillator and which is an output of the HEADER cells . 
+
+Such type of voltage domains are created within the floorplan.tcl script , as shown below :
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222964752-e6be14a2-9ce2-4b5d-9b16-5d287e9d6bac.png">
+ </p>
+
+In the above image, it is observed that the line #34 will create a voltage domain named TEMP_ANALOG with area coordinates as defined in config.mk.Lines #36 to #38 will initialize the floorplan, as default in OpenROAD Flow, from the die area, core area and place site coordinates from config.mk. And finally, lines #40 to #42 will source read_domain_instances.tcl, a script that assigns the corresponding instances to the TEMP_ANALOG domain group. It gets the wanted instances from the DOMAIN_INSTS_LIST variable, set to tempsenseInst_domain_insts.txt in config.mk. This will ensure the cells are placed in the correct voltage domain during the detailed placement phase.The tempsenseInst_domain_insts.txt file contains all instances to be placed in the TEMP_ANALOG domain (VIN voltage tracks). These cells are the components of the ring oscillator, including the inverters whose quantity may vary according to the optimization results. Thus, this file actually gets generated during temp-sense-gen.py.
+
+## Placement 
+
+Placement is the next step which takes place after the floorplan is ready and it has two phases :- Global Placement and Detailed Placement .In this phase , all instances will be placed in their respective voltage domain , ready for routing.
+
+The Global Placement power and area report is shown below:
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222965941-9d194701-1ea6-447f-b1f2-a3808e3eaf31.png">
+ <img src="https://user-images.githubusercontent.com/90523478/222966003-cbebfc7e-897f-4922-b366-459fbeff325d.png">
+ </p>
+
+
+The Detailed Placement power and area report is as shown below:
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222966063-b5f795b1-cce6-47bc-a5cf-0d7d120e934f.png">
+ </p>
+ 
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222966293-45d3106f-1a45-4124-9439-57e70d16b23a.png">
+ </p>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222966370-0081c87b-0b00-48dc-89d5-436ac22a1e68.png">
+ </p>
+
+## Routing 
+
+Routing is also divided into two phases : Global Routing and Deatiled Routing . Global_route.tcl is shown below:
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222966737-2e8d733e-0e31-4b4b-add2-71433e43e345.png">
+ </p>
+
+This above image shows that two other files : add_ndr_rules.tcl , which adds an NDR rule to the VIN net to improve routes that connect both voltage domains and create_custom_connections.tcl , which creates the connection between the VIN net and HEADER instances.
 
 
 
