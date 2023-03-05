@@ -156,6 +156,20 @@ Routing is also divided into two phases : Global Routing and Deatiled Routing . 
 
 This above image shows that two other files : add_ndr_rules.tcl , which adds an NDR rule to the VIN net to improve routes that connect both voltage domains and create_custom_connections.tcl , which creates the connection between the VIN net and HEADER instances.
 
+The Global Route power and area report is shwon below:
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222967339-4c09be55-e87e-46e5-b62b-aa863963e7b3.png">
+ </p>
+ 
+
+Detail_route.tcl is shown below :
+<p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222967087-7815827e-cd03-44db-a7c4-22c080f89610.png">
+ <img src="https://user-images.githubusercontent.com/90523478/222967433-7cb50f75-c6ee-45e8-b59f-b183d8b31edd.png">
+ </p>
+
+The Deatiled 
+
 
 
 
