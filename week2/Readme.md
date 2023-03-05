@@ -164,19 +164,46 @@ The Global Route power and area report is shwon below:
 <img src="https://user-images.githubusercontent.com/90523478/222967683-512cf0b7-d28c-43bf-a2cd-30acc416e00b.png">
 <img src=https://user-images.githubusercontent.com/90523478/222967756-fa3e50fe-82e6-40b9-a85a-ac9d7c373a60.png">
 </p>
- 
 
-Detail_route.tcl is shown below :
-                                                                                                               
+Detail_route.tcl is shown below:
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222968253-e8495735-5961-4119-9965-92c335e7012a.png">
+</p>
+        
+                                                                                                                
+                                                                                                                
+  ## Final Layout after Routing
+        
+ The final Layout of temp_sense after routing in KLayout is shown in below image :-
+
+To open the final layout after routing in Klayout follow the given steps below:-
+1)	Go to that directory where you have installed the klayout . For example, in my case it is under this directory 
+
+                     “Desktop/vsd_3FADC”
+2)	Write “klayout” this command by going in this directory which I stated above .
+3)	Your klayout opens up now, for opening the final layout in klayout 
+Just go to  File Open  openfasoc/openfasoc/generators/temp-sense-gen/flow/results/sky130hd/tempsense
+
+And clicks on “ 6_final.gds” and then click on Open 
+
+Then, it opens the layout of tempsense in klayout and it shows as given in the below image:-
+
 <p align="center">
-<img src="https://user-images.githubusercontent.com/90523478/222966063-b5f795b1-cce6-47bc-a5cf-0d7d120e934f.png">
+<img src="https://user-images.githubusercontent.com/90523478/222968457-a586913c-e94c-408b-8496-f2cd53d428b5.png">
+ </p>                                                                                                                
+
+ Zoom in view of forward layout is given below:-
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222968597-426e247c-707f-4137-8d22-74756efbba70.png">
+ </p>
+                                                               
+ Zoom in view of backward layout is given below:-
+  <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/222968719-ac2f76e0-b478-45cc-b461-11a79353d6e2.png">
  </p>
 
-                                                                                                                
-                                                                                                                
-                                                                                                                
- 
+## Post-Layout Verification
 
-
-
+The flow/makefile contains the targets magic_drc and netgen_lvs that run when the circuit is generated to make sure that it matches the specified design. In flow/makefile , both targets magic_drc and netgen_lvs execute using make.
+As part of the DRC, Magic examines the generated GDS file for failed constraints, writing an error report under temp-sense-gen/flow/reports/.
 
