@@ -303,16 +303,14 @@ C21 a_230_2352# a_147_2352# 1.15fF
 C22 a_716_2073# a_147_2352# 0.80fF
 C23 a_200_2073# a_147_2352# 0.82fF
 C24 w_1032_1512# a_147_2352# 7.65fF
-.ends
-          ```
+.ends```
                                        
            
            Step 8 and Step 9 Modifying the extracted Netlist from ALIGN Layout and saving that modified netlist 
           
-          Modified netlist is shown below:-
-      
-                  ```
-                            * NGSPICE file created from OPAMP_AS_COMPARATOR.ext - technology: sky130A
+          Modified netlist is shown below:
+          
+* NGSPICE file created from OPAMP_AS_COMPARATOR.ext - technology: sky130A
 
 ** sch_path: /home/vanshikatanwar/Desktop/Lab_1/xschem_lab/opamp_as_comparator.sch
 **.subckt opamp_as_comparator
@@ -409,7 +407,6 @@ C22 a_716_2073# a_147_2352# 0.80fF
 C23 a_200_2073# a_147_2352# 0.82fF
 C24 w_1032_1512# a_147_2352# 7.65fF
 .ends
-```
 
              
            Step 10, 11 and 12 execution of Spice File in Ngspice is shown below :-
