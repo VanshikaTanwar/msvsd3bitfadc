@@ -409,8 +409,7 @@ C22 a_716_2073# a_147_2352# 0.80fF
 C23 a_200_2073# a_147_2352# 0.82fF
 C24 w_1032_1512# a_147_2352# 7.65fF
 .ends
-                            ```
-
+```
 
              
            Step 10, 11 and 12 execution of Spice File in Ngspice is shown below :-
