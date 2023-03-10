@@ -476,3 +476,24 @@ Now, our next step is to generate the layout of Opamp as a Comparator ADC using 
                                                                       .VSS(vss),
                                                                       .OUT(out));
                                                  endmodule
+                                                 
+                                                 
+  ## Analog Verilog Code of Ring Osci
+  
+  module Ring_Osc (vdd,gnd,Vout);
+input vdd;
+input gnd;
+output Vout;
+endmodule
+
+
+## Analog Verilog Code of ADC
+
+module one_Bit_ADC opampADC(vdd,vdd,in1,in2,out);
+     input vdd;
+     input vss;
+     input in1;
+     input in2;
+     output out;
+endmodule
+
