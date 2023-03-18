@@ -1,6 +1,8 @@
 ## Week 5 Task
 
-OpenFASoC Flow for our design 
+### OpenFASoC Flow for our design
+
+#### Layout implementation of RO and ADC
 
 For OpenFASoC flow go to openfasoc install directory ~/openfasoc/openfasoc/generators  create a new folder with your design name. As, in my case it is async-gen.
 
