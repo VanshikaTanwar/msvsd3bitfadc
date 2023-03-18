@@ -59,6 +59,6 @@ Runniing Floorplan
 <img src="https://user-images.githubusercontent.com/90523478/226072266-161c0f3a-44e8-499d-846c-6e14db45d2e8.png">
  </p> 
 
-Note:- Error is coming in floorplan, so trying to solve this error.
+*Note:- Error is coming in floorplan, so trying to solve this error.*
  
- Debugging error of floorplan is in process.
+ *Debugging error of floorplan is in process.*
