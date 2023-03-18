@@ -56,6 +56,10 @@ make sky130hd_async_verilog
 Runniing Floorplan
 
  <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/226072990-b90eb77f-b0bd-47cc-82db-aeac96de9104.png">
+ </p> 
+
+ <p align="center">
 <img src="https://user-images.githubusercontent.com/90523478/226072266-161c0f3a-44e8-499d-846c-6e14db45d2e8.png">
  </p> 
 
