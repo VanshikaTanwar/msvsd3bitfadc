@@ -37,10 +37,26 @@ make sky130hd_async_verilog
  After this step Synthesis is also ran successfully
  
   <p align="center">
- https://user-images.githubusercontent.com/90523478/226071958-a3df2f98-b5bc-474f-9f8d-1ed3dba28ead.png
-<img src="">
+<img src="https://user-images.githubusercontent.com/90523478/226071958-a3df2f98-b5bc-474f-9f8d-1ed3dba28ead.png">
+ </p> 
+
+ 
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/226072105-9d95f83b-eeb2-4adb-b258-05f4e597d2a2.png">
  </p> 
  
+ 
+  
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/226072178-5f001d9f-0640-42f3-ba40-7c590b5d7f66.png">
+ </p> 
 
+Runniing Floorplan
+
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/226072266-161c0f3a-44e8-499d-846c-6e14db45d2e8.png">
+ </p> 
+
+Note:- Error is coming in floorplan, so trying to solve this error.
  
  
