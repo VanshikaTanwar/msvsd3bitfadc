@@ -1,0 +1,19 @@
+
+23. Printing statistics.
+
+=== async_updo ===
+
+   Number of wires:                  4
+   Number of wire bits:              4
+   Number of public wires:           4
+   Number of public wire bits:       4
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  2
+     Ring_Osc_Analog                 1
+     one_Bit_ADC                     1
+
+   Area for cell type \Ring_Osc_Analog is unknown!
+   Area for cell type \one_Bit_ADC is unknown!
+
