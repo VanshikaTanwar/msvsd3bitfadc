@@ -1,0 +1,96 @@
+OpenROAD v2.0-6895-g5c85b36f8 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /home/vanshikatanwar/openfasoc/openfasoc/generators/async-gen/flow/../../../common/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0226] Finished LEF file:  /home/vanshikatanwar/openfasoc/openfasoc/generators/async-gen/flow/../../../common/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef
+[INFO ODB-0222] Reading LEF file: /home/vanshikatanwar/openfasoc/openfasoc/generators/async-gen/flow/../../../common/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef
+[INFO ODB-0225]     Created 441 library cells
+[INFO ODB-0226] Finished LEF file:  /home/vanshikatanwar/openfasoc/openfasoc/generators/async-gen/flow/../../../common/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef
+[INFO ODB-0222] Reading LEF file: ../blocks/sky130hd/lef/Ring_Osc_Analog_0.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file ../blocks/sky130hd/lef/Ring_Osc_Analog_0.lef at line 2.
+
+[INFO ODB-0225]     Created 1 library cells
+[INFO ODB-0226] Finished LEF file:  ../blocks/sky130hd/lef/Ring_Osc_Analog_0.lef
+[INFO ODB-0222] Reading LEF file: ../blocks/sky130hd/lef/one_Bit_ADC_0.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file ../blocks/sky130hd/lef/one_Bit_ADC_0.lef at line 2.
+
+[INFO ODB-0225]     Created 1 library cells
+[INFO ODB-0226] Finished LEF file:  ../blocks/sky130hd/lef/one_Bit_ADC_0.lef
+[WARNING STA-0201] /home/vanshikatanwar/openfasoc/openfasoc/generators/async-gen/flow/results/sky130hd/async/1_synth.v line 8, instance RO port Vout not found.
+[WARNING STA-0201] /home/vanshikatanwar/openfasoc/openfasoc/generators/async-gen/flow/results/sky130hd/async/1_synth.v line 11, instance opampADC port in1 not found.
+[WARNING STA-0201] /home/vanshikatanwar/openfasoc/openfasoc/generators/async-gen/flow/results/sky130hd/async/1_synth.v line 11, instance opampADC port in2 not found.
+[WARNING STA-0201] /home/vanshikatanwar/openfasoc/openfasoc/generators/async-gen/flow/results/sky130hd/async/1_synth.v line 11, instance opampADC port out not found.
+[WARNING STA-0201] /home/vanshikatanwar/openfasoc/openfasoc/generators/async-gen/flow/results/sky130hd/async/1_synth.v line 11, instance opampADC port vdd not found.
+[WARNING ORD-1011] LEF master Ring_Osc_Analog has no liberty cell.
+[WARNING ORD-1011] LEF master one_Bit_ADC has no liberty cell.
+number instances in verilog is 2
+[WARNING IFP-0028] Core area lower left (15.000, 15.000) snapped to (15.180, 16.320).
+[INFO IFP-0001] Added 60 rows of 358 sites.
+[INFO RSZ-0026] Removed 0 buffers.
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+
+==========================================================================
+floorplan final report_tns
+--------------------------------------------------------------------------
+tns 0.00
+
+==========================================================================
+floorplan final report_wns
+--------------------------------------------------------------------------
+wns 0.00
+
+==========================================================================
+floorplan final report_worst_slack
+--------------------------------------------------------------------------
+worst slack INF
+
+==========================================================================
+floorplan final report_clock_skew
+--------------------------------------------------------------------------
+
+==========================================================================
+floorplan final report_checks -path_delay min
+--------------------------------------------------------------------------
+No paths found.
+
+==========================================================================
+floorplan final report_checks -path_delay max
+--------------------------------------------------------------------------
+No paths found.
+
+==========================================================================
+floorplan final report_checks -unconstrained
+--------------------------------------------------------------------------
+No paths found.
+
+==========================================================================
+floorplan final report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+                           0.0%       0.0%       0.0%
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 321 u^2 1% utilization.
+
+Elapsed time: 0:00.72[h:]min:sec. CPU time: user 0.61 sys 0.08 (96%). Peak memory: 103712KB.
