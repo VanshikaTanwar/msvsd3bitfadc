@@ -1,0 +1,8 @@
+{
+    "module_name": "async_updo",
+    "generator": "async-gen",
+    "specifications": {
+    	"frequency": { "min": 5, "max": 12 },
+    	"model" :"modelfile.csv"
+	}
+}
