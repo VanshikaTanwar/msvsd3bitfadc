@@ -61,7 +61,19 @@ Runniing Floorplan
 
  <p align="center">
 <img src="https://user-images.githubusercontent.com/90523478/226072266-161c0f3a-44e8-499d-846c-6e14db45d2e8.png">
+ </p>  
+
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/227667093-36ae024f-3028-4c22-b916-fdb663677333.png">
  </p> 
+ while this much report is generated of floorplan
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/227667173-275ff599-db09-4dbe-82fb-633660b4a02a.png">
+ </p>
+ <p align="center">
+<img src="https://user-images.githubusercontent.com/90523478/227667217-0c99c1a0-d03c-417b-9069-3eb44b021391.png">
+ </p>
+
 
 *Note:- Error is coming in floorplan, so trying to solve this error.*
  
